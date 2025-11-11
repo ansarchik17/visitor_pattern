@@ -10,14 +10,14 @@ func main() {
 	sedanHonda := &car.Sedan{Model: "Honda", Days: 3}
 	truckFord := &car.Truck{Model: "Ford", Days: 2}
 
-	rentCalc := &visitor.RentCalculator{}
-	maintCheck := &visitor.MaintenanceChecker{}
+	rentCalculator := &visitor.RentCalculator{}
+	maintenanceChecker := &visitor.MaintenanceChecker{}
 
 	fmt.Println("1)Rental Cost Calculation!")
-	sedanHonda.Accept(rentCalc)
-	truckFord.Accept(rentCalc)
+	sedanHonda.Accept(rentCalculator)
+	truckFord.Accept(rentCalculator)
 
 	fmt.Println("\n2)Maintenance Check!")
-	sedanHonda.Accept(maintCheck)
-	truckFord.Accept(maintCheck)
+	sedanHonda.Accept(maintenanceChecker)
+	truckFord.Accept(maintenanceChecker)
 }
