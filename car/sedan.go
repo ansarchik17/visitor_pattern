@@ -9,6 +9,6 @@ func (sedan *Sedan) GetType() string {
 	return "Sedan"
 }
 
-func (sedan *Sedan) Accept(v Visitor) {
-	v.VisitSedan(sedan)
+func (sedan *Sedan) Accept(visitor Visitor) {
+	visitor.VisitSedan(sedan)
 }
