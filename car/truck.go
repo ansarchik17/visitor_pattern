@@ -6,7 +6,7 @@ type Truck struct {
 }
 
 func (truck *Truck) GetType() string {
-	return "Truck"
+	return truck.Model
 }
 
 func (truck *Truck) Accept(visitor Visitor) {
